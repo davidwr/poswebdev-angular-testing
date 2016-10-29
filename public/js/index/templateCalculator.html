@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>Calculator Angular Test Example</h1>
+
+  <form>
+    <div class="form-group">
+      <div>
+        <label>Value1:</label>
+        <input class="form-control" type="number" ng-model="value1" placeholder="Write to enable the calculator buttons">
+
+        <label>Value2:</label>
+        <input class="form-control" type="number" ng-model="value2" placeholder="Write to enable the calculator buttons">
+      </div>      
+    </div>
+    <button class="btn btn-success" ng-disabled="!value1 || !value2" ng-click="sumTwoValues()">+</button>
+    <button class="btn btn-warning" ng-disabled="!value1 || !value2" ng-click="subtractTwoValues()">-</button>
+    <button class="btn btn-danger" ng-disabled="!value1 || !value2" ng-click="multiplyTwoValues()">*</button>
+    <button class="btn btn-primary" ng-disabled="!value1 || !value2" ng-click="divideTwoValues()">/</button>
+  </form>
+  
+  <h2>{{result}}</h2>
+  <calculator-directive variable="{{'Directive Test ' + result}}" variable-two="Directive Test"></calculator-directive>
+
+</div>
